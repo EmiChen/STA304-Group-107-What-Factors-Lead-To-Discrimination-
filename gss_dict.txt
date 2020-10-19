@@ -1,0 +1,97 @@
+dictionary using Y {
+*****************************************************************
+*  Replace 'Y' with the name of the data file.
+*  The default suffix is '.raw'.
+*
+*  Put this dictionary into a separate file (with the suffix .dct).
+*  (The first line of the dictionary file must contain the
+*  'dictionary' command.)
+*
+*  Then edit the name of that dictionary file into the 'do-file'
+*  portion of the STATA definitions.
+*******************************************************************
+*  Records per case:
+_lines(1)
+
+_line(1)
+
+_column(1)     long  CASEID             %5f    ""
+_column(7)     int   acs1020  :acs1020  %1f    "Abuse by a child, relative, friend or caregiver."
+_column(9)     int   adp2030  :adp2030  %1f    "Dating - Experienced physical/sexual violence"
+_column(11)    int   agearrc  :agearrc  %2f    "Age groups of the respondent when came to live permanently in Canada"
+_column(14)    int   ageldimm :ageldimm %2f    "Age group - first became a landed immigrant in Canada"
+_column(17)    int   agelswkc :agelswkc %2f    "Age of respondent when did last paid work."
+_column(20)    int   brthmacc :brthmacc %1f    "Place of birth of respondent - Geographical macro-region"
+_column(22)    int   cextalk  :cextalk  %1f    "Childhood victimization - talked to someone"
+_column(24)    int   cex_040c :cex_040c %2f    "Childhood victimization - Rel. between adult and resp. (phys. inc.)"
+_column(27)    int   cex_065c :cex_065c %2f    "Childhood victimization - Rel. between adult and resp (sex.. inc.)"
+_column(30)    int   chh0014c :chh0014c %1f    "Child(ren) in household - 0 to 14 years"
+_column(32)    int   chrhsdc  :chrhsdc  %1f    "Respondents child(ren) in household - Any age/marital status"
+_column(34)    int   cwp_5080 :cwp_5080 %1f    "Contact with police - other reasons"
+_column(36)    int   dnmov5yr :dnmov5yr %2f    "Residential mobility - Last 5 years"
+_column(39)    int   dur_115c :dur_115c %1f    "How often (cocaine, speed, etc.) - Respondent"
+_column(41)    int   eop_200c :eop_200c %2f    "Spouse/partner - Highest level of education"
+_column(44)    int   hhincg1  :hhincg1  %2f    "Household income - Household income group (before tax)"
+_column(47)    int   hhsizec  :hhsizec  %1f    "Household size of respondent."
+_column(49)    int   incg1    :incg1    %2f    "Income - Personal income group (before tax)"
+_column(52)    int   mrarel   :mrarel   %1f    "Stalking (most recent crim. stalker) - Relationship to the respondent"
+_column(54)    int   msi      :msi      %2f    "Income - Major source (before tax)"
+_column(57)    int   numvactc :numvactc %2f    "Evening activities per month."
+_column(60)    int   parnumc  :parnumc  %1f    "Number of parents the respondent has in household"
+_column(62)    int   prtypec  :prtypec  %1f    "Type of partner respondent has living in the household."
+_column(64)    int   religflg :religflg %2f    "Religious affiliation flag."
+_column(67)    int   relprflg :relprflg %1f    "Religious affiliation flag - Respondent's spouse/partner."
+_column(69)    int   rns370_c :rns370_c %2f    "Stalking (inc. not reported) - Main reason."
+_column(72)    int   wti_120c :wti_120c %2f    "Telework - Number of hours of paid work at home"
+_column(75)    int   yrlndimm :yrlndimm %2f    "Landed immigrant status - Year"
+_column(78)    long  recid    :recid    %5f    "Record identification"
+_column(84)    double wght_hsd :wght_hsd %9.4f  "Household weight"
+_column(94)    double wght_per :wght_per %10.4f "Person weight"
+_column(105)   int   cbu_100  :cbu_100  %2f    "Internet use over the past 5 years"
+_column(108)   int   cbu_110  :cbu_110  %1f    "Cyber bullying - Threatening, aggressive e-mails/texts"
+_column(110)   int   cbu_120  :cbu_120  %1f    "Cyber bullying - Aggressive comments through e-mail, etc."
+_column(112)   int   cbu_125  :cbu_125  %1f    "Cyber bullying - Pictures that embarrassed or threatened you"
+_column(114)   int   cbu_130  :cbu_130  %1f    "Cyber bullying - Used respondent's identity to post information"
+_column(116)   int   cbu_140  :cbu_140  %1f    "Cyber bullying - Other cyber stalking/bullying"
+_column(118)   int   cbu_150  :cbu_150  %1f    "Cyber bullying - Past 12 months"
+_column(120)   int   cip_10   :cip_10   %1f    "Confidence in the police"
+_column(122)   int   agegr10  :agegr10  %1f    "Age group of respondent (groups of 10)"
+_column(124)   int   luc_rst  :luc_rst  %1f    "Population centres indicator"
+_column(127)   str2  prv                %2s    "Province of residence"
+_column(131)   int   region   :region   %1f    "Region of residence of the respondent"
+_column(133)   int   sex      :sex      %1f    "Sex of respondent"
+_column(135)   int   discrim  :discrim  %1f    "Victim of discrimination - 5 years"
+_column(137)   int   dis_10   :dis_10   %1f    "Discrimination - Sex"
+_column(139)   int   dis_15   :dis_15   %1f    "Discrimination - Ethnicity or culture"
+_column(141)   int   dis_20   :dis_20   %1f    "Discrimination - Race or skin colour"
+_column(143)   int   dis_25   :dis_25   %1f    "Discrimination - Physical appearance"
+_column(145)   int   dis_30   :dis_30   %1f    "Discrimination - Religion"
+_column(147)   int   dis_35   :dis_35   %1f    "Discrimination - Sexual orientation"
+_column(149)   int   dis_40   :dis_40   %1f    "Discrimination - Age"
+_column(151)   int   dis_45   :dis_45   %1f    "Discrimination - Physical or mental disability"
+_column(153)   int   dis_50   :dis_50   %1f    "Discrimination - Language"
+_column(155)   int   dis_55   :dis_55   %1f    "Discrimination - Other"
+_column(157)   int   dis_rind :dis_rind %1f    "Discrimination/unfair treatment - Reasons - Single/mutiple indicator"
+_column(159)   int   drr_110  :drr_110  %2f    "Alcohol consumption - Respondent"
+_column(162)   int   drr_120  :drr_120  %2f    "5 or more drinks on the same occasion - Respondent"
+_column(165)   int   dur_100  :dur_100  %1f    "Use of marijuana, hashish, hash oil or other cannabis - Respondent"
+_column(167)   int   dur_105  :dur_105  %1f    "How often (marijuana, etc.) - Respondent"
+_column(169)   int   dur_110  :dur_110  %1f    "Use of non-prescribed drugs (cocaine, speed, etc) - Respondent"
+_column(171)   int   esc1_01  :esc1_01  %1f    "Education - School Attendance"
+_column(173)   int   isl_100  :isl_100  %3f    "Number of relatives/friends respondent feels close to"
+_column(177)   int   live_loc :live_loc %2f    "Length of time respondent has lived in current city or local community"
+_column(180)   int   lwc_10   :lwc_10   %1f    "Respondent lives in a welcoming community"
+_column(182)   int   med_110  :med_110  %1f    "Medication - Help to sleep"
+_column(184)   int   med_120  :med_120  %1f    "Medication - Help to calm down"
+_column(186)   int   med_130  :med_130  %1f    "Medication - Help to get out of depression"
+_column(188)   int   rew_10   :rew_10   %1f    "Ever worked at a job or business"
+_column(190)   int   sps_10   :sps_10   %2f    "Satisfaction with personal safety from crime"
+_column(193)   int   srh_110  :srh_110  %1f    "Self-rated general health"
+_column(195)   int   srh_115  :srh_115  %1f    "Self-rated mental health"
+_column(197)   int   tip_10   :tip_10   %1f    "Trust - Members of family"
+_column(199)   int   tip_15   :tip_15   %1f    "Trust - People in neighbourhood"
+_column(201)   int   tip_20   :tip_20   %2f    "Trust - People from work or school"
+_column(204)   int   tip_25   :tip_25   %1f    "Trust - Strangers"
+_column(206)   float whw_120  :whw_120  %5.1f  "Number of hours worked per week at job"
+_column(212)   int   whw_230  :whw_230  %2f    "Work schedule at main job"
+}

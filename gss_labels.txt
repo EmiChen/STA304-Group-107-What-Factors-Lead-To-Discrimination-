@@ -1,0 +1,291 @@
+*******************************************************************
+*  Stata "do-file" file with labels and missing data specifications
+*  Created by ddltox on Oct 15, 2020  (Thu 01:21 AM EDT)
+*  DDL source file: "/web/sda.artsci.utoronto.ca/htdocs/sdaweb/tmpdir/AA6p57vE.txt".
+*
+*  Note that the data dictionary is given at the end of this file.
+*  Put the dictionary into a separate file (by editing this file).
+*  Then specify below the name of the dictionary file.
+*
+*  DDL file gives the following dataset description:
+*    Records per case: 1
+*    Record length:    213
+*******************************************************************
+
+
+label data "GSS Cycle 28, 2014 Main"
+
+#delimit ;
+label define acs1020   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define adp2030   
+                       1 "Experienced phys. and/or sexual violence by dating partner" 
+                       2 "Did not experience phys. and/or sex. viol. by dating partner" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define agearrc   1 "0 to 4" 2 "5 to 9" 3 "10 to 14" 4 "15 to 19" 
+                       5 "20 to 24" 6 "25 to 29" 7 "30 to 34" 8 "35 to 39" 
+                       9 "40 to 44" 10 "45 to 49" 11 "50 years and over" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define ageldimm  1 "0 to 4" 2 "5 to 9" 3 "10 to 14" 4 "15 to 19" 
+                       5 "20 to 24" 6 "25 to 29" 7 "30 to 34" 8 "35 to 39" 
+                       9 "40 to 44" 10 "45 to 49" 11 "50 years and over" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define agelswkc  65 "65+" 95 "Never worked" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define brthmacc  1 "Americas" 2 "Europe" 3 "Africa" 4 "Asia" 
+                       5 "Oceania / Antarctica and adjacent islands" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define cextalk   
+                       1 "Talked to someone (family, friend, teacher, priest, etc.)" 
+                       2 "Did not talk to anyone" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define cex_040c  1 "Parent" 2 "Other family" 
+                       3 "Acquaintance/friend/neighbour/classmate" 
+                       4 "Authority figure" 5 "Stranger" 
+                       6 "Other/known by sight" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define cex_065c  1 "Parent" 2 "Other family" 
+                       3 "Acquaintance/friend/neighbour/classmate" 
+                       4 "Authority figure" 5 "Stranger" 
+                       6 "Other/known by sight" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define chh0014c  0 "None" 1 "One" 2 "Two" 3 "Three or more children" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define chrhsdc   0 "None" 1 "One" 2 "Two" 3 "Three" 
+                       4 "Four or more children" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define cwp_5080  1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dnmov5yr  0 "No moves" 1 "One move" 2 "Two moves" 
+                       3 "Three moves" 4 "Four or more moves" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define dur_115c  1 "At least once a week" 
+                       2 "Once or twice in the past month" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define eop_200c  1 "Earned doctorate (Ph.D., D.Sc., D.Ed.)" 
+                       2 "Masters (M.A., M.Sc., M.Ed.)" 
+                       3 "Degree in Medicine, Dentistry, VeterinaryMedicine/Optometry" 
+                       4 "Bachelor or undergraduate degree, or teachers college" 
+                       5 "Diploma/certificate community college, CEGEP/nursing school" 
+                       6 "Dipl/cert trade, tech/vocational school, or business college" 
+                       7 "Some university" 
+                       8 "Some community college, CEGEP or nursing school" 
+                       9 "Some trade, technical, vocational school, business college" 
+                       10 "High school diploma" 11 "Some high school" 
+                       12 "Elementary school diploma" 13 "Some elementary" 
+                       14 "No schooling/other" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define hhincg1   1 "Less than $20,000" 2 "$20,000 to $39,999" 
+                       3 "$40,000 to $59,999" 4 "$60,000 to $79,999" 
+                       5 "$80,000 to $99,999" 6 "$100,000 to $119,999" 
+                       7 "$120,000 to $139,999" 8 "$140,000 or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define hhsizec   1 "One household member" 2 "Two household members" 
+                       3 "Three household members" 4 "Four household members" 
+                       5 "Five household members" 
+                       6 "Six household members or more" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define incg1     1 "Less than $20,000" 2 "$20,000 to $39,999" 
+                       3 "$40,000 to $59,999" 4 "$60,000 to $79,999" 
+                       5 "$80,000 to $99,999" 6 "$100,000 to $119,999" 
+                       7 "$120,000 or more" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define mrarel    1 "Stranger" 2 "Spouse/ex-spouse" 
+                       3 "Boyfriend/girlfriend/ex-boyfriend/ex-girlfriend" 
+                       4 "Other relative" 5 "Other" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define msi       1 "Wages and salaries" 2 "Self-employment income" 
+                       3 "Government transfers" 4 "Investment income" 
+                       5 "Private retirement pensions" 6 "Other" 
+                       7 "All sources = 0 (or no income)" 8 "Unspecified" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define numvactc  0 "None" 32 "32 or more" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define parnumc   0 "No parents" 1 "One parent" 2 "Two parents" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define prtypec   0 "Respondent has no spouse/partner in the household" 
+                       1 "Respondent has an opposite sex married spouse in household" 
+                       2 "Respondent has opposite sex common-law partner in household" 
+                       3 "Respondent has same-sex spouse/partner in household" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define religflg  1 "Religious affialiation" 
+                       2 "No religious affiliation" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define relprflg  1 "Religious affiliation" 2 "No religious affiliation" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define rns370_c  1 "Fear of revenge by the stalker or others" 
+                       2 "Police could not find/identify the stalker" 
+                       3 "Lack of evidence" 
+                       4 "Police would not have considered incident important enough" 
+                       5 "Police would not have been efficient or effective" 
+                       6 "Unsatisfactory service in the past" 
+                       7 "Reporting didn't succeed/dealing with police cause trouble" 
+                       8 "Did not want the stalker in trouble with the law" 
+                       9 "Did not want the hassle of dealing with police" 
+                       10 "Incident private and handled it informally" 
+                       11 "Did not want others to find out (incl. publicity/news)" 
+                       12 "Crime was minor and not worth time to report" 
+                       13 "No one was harmed / no financial loss" 
+                       14 "No harm was intended" 
+                       15 "Didn't think stalker will be convicted/adequalty punished" 
+                       16 "Fear/didn't want hassle of dealing with the courts" 
+                       17 "Police would be biaised" 
+                       18 "It was reported to another official" 19 "Other" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define wti_120c  75 "75 or more hours" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define yrlndimm  1 "Before 1946" 2 "1946 to 1959" 3 "1960 to 1964" 
+                       4 "1965 to 1969" 5 "1970 to 1974" 6 "1975 to 1979" 
+                       7 "1980 to 1984" 8 "1985 to 1989" 9 "1990 to 1994" 
+                       10 "1995 to 1999" 11 "2000 to 2004" 12 "2005 to 2009" 
+                       13 "2010 to 2014" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define recid     99996 "Valid skip" 99997 "Don't know" 99998 "Refusal" 
+                       99999 "Not stated" ;
+label define wght_hsd  99999.9996 "Valid skip" 99999.9997 "Don't know" 
+                       99999.9998 "Refusal" 99999.9999 "Not stated" ;
+label define wght_per  99999.9996 "Valid skip" 99999.9997 "Don't know" 
+                       99999.9998 "Refusal" 99999.9999 "Not stated" ;
+label define cbu_100   1 "Daily" 2 "A few times a week" 3 "Once a week" 
+                       4 "A few times a month" 5 "Once a month" 
+                       6 "Less than once a month" 7 "Rarely" 8 "Never" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define cbu_110   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cbu_120   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cbu_125   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cbu_130   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cbu_140   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cbu_150   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define cip_10    1 "A great deal of confidence" 2 "Some confidence" 
+                       3 "Not very much confidence" 4 "No confidence at all" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define agegr10   1 "15 to 24" 2 "25 to 34" 3 "35 to 44" 4 "45 to 54" 
+                       5 "55 to 64" 6 "65 to 74" 7 "75 years and older" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define luc_rst   1 "Larger urban population centres (CMA/CA)" 
+                       2 "Rural areas/small population centres (non-CMA/CA)" 
+                       3 "Prince Edward Island" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define region    1 "Atlantic region" 2 "Quebec" 3 "Ontario" 
+                       4 "Prairie region" 5 "British Columbia" 
+                       6 "Territories" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define sex       1 "Male" 2 "Female" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define discrim   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_10    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_15    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_20    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_25    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_30    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_35    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_40    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_45    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_50    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_55    1 "Yes - Specify" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dis_rind  0 "No discrimination experienced" 1 "Single response" 
+                       2 "Multiple responses" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define drr_110   1 "Every day" 2 "4-6 times a week" 
+                       3 "2-3 times a week" 4 "Once a week" 
+                       5 "Once or twice in the past month" 
+                       6 "Not in the past month" 7 "Never drinks" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define drr_120   0 "Never" 95 "Less than once a month" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define dur_100   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define dur_105   1 "Every day" 2 "4-6 times a week" 
+                       3 "2-3 times a week" 4 "Once a week" 
+                       5 "Once or twice in the past month" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define dur_110   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define esc1_01   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define isl_100   0 "None" 996 "Valid skip" 997 "Don't know" 
+                       998 "Refusal" 999 "Not stated" ;
+label define live_loc  1 "Less than 6 months" 
+                       2 "6 months to less than 1 year" 
+                       3 "1 year to less than 3 years" 
+                       4 "3 years to less than 5 years" 
+                       5 "5 years to less than 10 years" 
+                       6 "10 years and over" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define lwc_10    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define med_110   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define med_120   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define med_130   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define rew_10    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define sps_10    1 "Very satisfied" 2 "Satisfied" 
+                       3 "Neither satisfied nor dissatisfied" 
+                       4 "Dissatisfied" 5 "Very dissatisfied" 6 "No opinion" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define srh_110   1 "Excellent" 2 "Very good" 3 "Good" 4 "Fair" 5 "Poor" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define srh_115   1 "Excellent" 2 "Very good" 3 "Good" 4 "Fair" 5 "Poor" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define tip_10    1 "1 - Cannot be trusted at all" 2 "2" 3 "3" 4 "4" 
+                       5 "5 - Can be trusted a lot" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define tip_15    1 "1 - Cannot be trusted at all" 2 "2" 3 "3" 4 "4" 
+                       5 "5 - Can be trusted a lot" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define tip_20    1 "1- Cannot be trusted at all" 2 "2" 3 "3" 4 "4" 
+                       5 "5 - Can be trusted a lot" 
+                       6 "Does not go to school nor works" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define tip_25    1 "1 - Cannot be trusted at all" 2 "2" 3 "3" 4 "4" 
+                       5 "5 - Can be trusted a lot" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define whw_120   999.6 "Valid skip" 999.7 "Don't know" 999.8 "Refusal" 
+                       999.9 "Not stated" ;
+label define whw_230   1 "A regular daytime schedule or shift" 
+                       2 "A regular evening shift" 3 "A regular night shift" 
+                       4 "A rotating shift (one that changes periodically)" 
+                       5 "A split shift (one consisting of 2+ distinct periods)" 
+                       6 "A compressed work week" 7 "On call or casual" 
+                       8 "An irregular schedule" 9 "Other - Specify" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+
